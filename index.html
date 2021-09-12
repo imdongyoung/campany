@@ -9,9 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <script>
@@ -23,6 +26,20 @@
             } 
         });
     </script>
+    <script>
+        $(document).ready(function(){
+          $('.slider').bxSlider({
+            auto: true,
+            controls: false,
+            autoControls: false,
+            pager:false,
+          });
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+    <img src="img/sky.jpeg" class="back">
     <section class="fp">
         <video autoplay muted loop>
             <source src="img/beach3.mp4" type="video/mp4">
@@ -33,10 +50,10 @@
                     <a href="#">D O N G <br class="lineChange">Y O U N G</a>
                 </div>
                 <ul class="nav_menu">
-                    <li><a href="#profile">HOME</a></li>
-                    <li><a href="#">PROFILE</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">BOARD</a></li>
+                    <li><a href="#top">HOME</a></li>
+                    <li><a href="#profile">ABOUT</a></li>
+                    <li><a href="#project">PROJECT</a></li>
+                    <li><a href="http://hoyadesign1.cafe24.com/bbs/board.php?bo_table=formview">BOARD</a></li>
                 </ul>
             </nav>
         </section>
@@ -48,9 +65,9 @@
     </section>
     <section class="profile" id="profile">
         <div class="pro_img"> 
-            <img src="img/profile.jpg">
+            <img src="img/profile.jpg" data-aos="flip-right">
         </div>
-        <div class="profile_info">
+        <div class="profile_info" data-aos="flip-left">
             <ul>
                 <li>
                     <h4>PROFILE</h4>
@@ -84,9 +101,29 @@
             </ul>
         </div>
     </section>
-    <section calss="about">
+    <section class="project" id="project">
+        <div class="shop">
+            <div data-aos="zoom-out-up">
+                <img src="img/shop1.png">
+                <p>쇼핑몰 프로그램</p>
+            </div>
+        </div>
+        <div class="micro">
+            <div data-aos="zoom-out-up">
+                <p>마이크로소프트 클론코딩</p>
+                <img src="img/micro1.png">
+            </div>
+        </div>
+        <div class="mac">
+            <div data-aos="zoom-out-up">
+                <img src="img/mac1.png">
+                <p>맥도날드 키오스크 프로그램</p>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
         <div>
-            1
+            <p data-aos="zoom-out-up">Thank You<br>For Watch!</p>
         </div>
     </section>
 </body>

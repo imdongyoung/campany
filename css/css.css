@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -19,6 +21,12 @@ a{
 .lineChange{
     display: none;
 }
+.back{
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+}
 #intro{
     position: fixed;
     top: 0;
@@ -35,7 +43,7 @@ a{
     padding: 10px 0;
 }
 #intro.active .logo a{
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 video{
     position: absolute;
@@ -55,7 +63,7 @@ nav {
     transition: all 0.5s;
 }
 .logo > a{
-    font-size: 30px;
+    font-size: 2.2rem;
     transition: all 0.5s;
 }
 .logo a:hover{
@@ -67,7 +75,6 @@ nav {
     flex-basis: 100%;
     align-items: center;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 12px;
     margin: 8px 0px;
   }
 .logo::after {
@@ -91,7 +98,7 @@ nav {
 .nav_menu li a{
     width: 100%;
     height: 100%;
-    font-size: 15px;
+    font-size: 1.3rem;
 }
 .nav_menu li a:hover{
     transition: ease all 0.3s;
@@ -101,26 +108,31 @@ nav {
     color:rgba(255, 255, 255, 0.7);
     position: absolute;
     bottom: 0;
-    font-size: 8rem;
+    font-size: 10em;
     margin: 30px;
     font-weight: bold;
 }
 .profile{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     height: 100vh;
     text-align: center;
     font-family: 'Urbanist', sans-serif;
+    vertical-align: middle;
+    background: linear-gradient( 180deg, #d8c7b3 10%, #fff 90% );;
     /*background:linear-gradient( 90deg, #f0f6f5 30%, #fff 70% );*/
 }
-.profile_info{
-    margin-top: 80px;
-    margin-left: 100px;
-}
 .profile img{
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 120px;
+}
+.profile_info{
+    z-index: 99;
 }
 .profile_info ul li h4{
     text-align: left;
@@ -143,7 +155,60 @@ nav {
     font-size: 18px;
     margin-bottom: 10px;
 }
-.about{
+.mac, .shop{
     height: 100vh;
+    display: flex;
+    justify-content: space-around;
     background-color: #f0f6f5;
+    align-items: center;
+    font-size: 1.3rem;
+    align-items: center;
+}
+.micro{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+    align-items: center;
+    background-color: #fff;
+}
+.shop div img, .micro div img{
+    width: 60%;
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 30%);
+}
+.mac div, .micro div, .shop div{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mac div img{
+    width: 30%;
+    box-shadow: 10px 10px 20px rgb(0 0 0 / 30%);
+}
+.mac div img:hover, .shop div img:hover, .micro div img:hover{
+    transition: ease all 0.3s;
+    transform: scale(1.1);
+}
+.footer{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    font-family: 'Urbanist', sans-serif;
+}
+.footer > div{
+    width: 50%;
+    height: 60vh;
+    margin: 0 auto;
+    border: 10px solid #fff;
+    color: #fff;
+}
+.footer > div> p{
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20%;
 }
