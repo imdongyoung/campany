@@ -1,0 +1,1 @@
+$(window).on('scroll',function(){ if($(window).scrollTop()){ $('.intro').addClass('active'); }else{ $('.intro').removeClass('active'); } });

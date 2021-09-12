@@ -3,29 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="intro">
+    <script>
+        $(window).on('scroll',function(){ 
+            if($(window).scrollTop()){
+                $('#intro').addClass('active'); 
+            }else{
+                $('#intro').removeClass('active'); 
+            } 
+        });
+    </script>
+    <section class="fp">
         <video autoplay muted loop>
-            <source src="img/Beach1.mp4" type="video/mp4">
+            <source src="img/beach3.mp4" type="video/mp4">
         </video>
-        <nav>
-            <div class="logo">
-                <a href="#">D O N G <br class="lineChange">Y O U N G</a>
+        <section class="intro" id="intro">
+            <nav>
+                <div class="logo">
+                    <a href="#">D O N G <br class="lineChange">Y O U N G</a>
+                </div>
+                <ul class="nav_menu">
+                    <li><a href="#profile">HOME</a></li>
+                    <li><a href="#">PROFILE</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">BOARD</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <div class="main">
+                <p id="text">Welcome!<br>Dong Young<br>Web PortPolio</p>
             </div>
-            <ul class="nav_menu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">PROFILE</a></li>
-                <li><a href="#">AMOUT</a></li>
-                <li><a href="#">BOARD</a></li>
+        </section>
+    </section>
+    <section class="profile" id="profile">
+        <div class="pro_img"> 
+            <img src="img/profile.jpg">
+        </div>
+        <div class="profile_info">
+            <ul>
+                <li>
+                    <h4>PROFILE</h4>
+                    <div>
+                        <p>임동영</p>
+                        <p>2003.02.07</p>
+                        <p>010 9460 9607</p>
+                        <p>imdong207@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <h4>LISENCE</h4>
+                    <div>
+                        <p>정보처리산업기사</p>
+                        <p>정보기기운용기능사</p>
+                        <p>정보처리기능사</p>
+                        <p>컴퓨터활용능력 2급</p>
+                        <p>ITQ 한글</p>
+                    </div>
+                </li>
+                <li>
+                    <h4>SKILL</h4>
+                    <div>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                        <p>jquery</p>
+                        <p>Java</p>
+                    </div>
+                </li>
             </ul>
-            <a href="#" class="toggleBtn"><i class="fab fa-bars"></i></a>
-        </nav>
+        </div>
+    </section>
+    <section calss="about">
+        <div>
+            1
+        </div>
     </section>
 </body>
 </html>
